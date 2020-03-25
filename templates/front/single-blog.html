@@ -1,3 +1,4 @@
+{% extends "base.html.twig" %}
 {% block title %}Animal{% endblock %}
 {% block bradcam_title %}Single Blog{% endblock %}
 
@@ -413,7 +414,11 @@
 <!--================ Blog Area end =================-->
 
 {% endblock %}
+{% block javascripts %}
+{{ parent ()}}
+{% endblock %}
 
 </body>
+
 
 </html>
