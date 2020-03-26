@@ -22,4 +22,14 @@ class FrontController extends AbstractController
     {
         return $this->render('front/contact.html.twig');
     }
+
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function about()
+    {
+        return $this->render('front/about.html.twig');
+    }
+
 }

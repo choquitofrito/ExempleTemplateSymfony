@@ -1,5 +1,10 @@
+{% extends "base.html.twig" %}
+
 {% block title %}About{% endblock %}
+
+{# on remplace que le title. bradcam_area sera hérité #}
 {% block bradcam_title %}about us{% endblock %}
+
 {% block content %}
     <!-- pet_care_area_start  -->
     <div class="pet_care_area">
@@ -201,6 +206,7 @@
         </div>
     </div>
     {% endblock %}
+
     {% block javascripts %}
     {{ parent () }}
     {% endblock %}

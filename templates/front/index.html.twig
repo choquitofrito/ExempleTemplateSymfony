@@ -2,6 +2,7 @@
 
 {% block title %}Animal{% endblock %}
 
+{# pas de bradcam! on met le bloc vide. bradcam_title est vide car il se trouve à l'interieur #}
 {% block bradcam_area %}{% endblock %}
 
 {% block content %}
@@ -106,7 +107,7 @@
                             labore et dolore magna aliqua. <br> Quis ipsum suspendisse ultrices gravida. Risus commodo
                             <br>
                             viverra maecenas accumsan.</p>
-                        <a href="about.html" class="boxed-btn3">About Us</a>
+                        <a href="{{ path ('about') }}" class="boxed-btn3">About Us</a>
                     </div>
                 </div>
             </div>

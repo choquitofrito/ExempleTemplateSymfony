@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <title>{% block title %}{% endblock %}</title>
-    
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <link rel="manifest" href="site.webmanifest"> -->
@@ -14,8 +14,11 @@
     <!-- Place favicon.ico in the root directory -->
 
     <!-- C'est le même CSS dans tous les HTML, on n'a pas besoin de créer un bloc en principe -->
-    
+
     <!-- CSS here -->
+    <!-- Le css est le même pour toutes les pages dans ce template, pas besoin d'un bloc.
+    S'il y avait de différences, on mettrait toute la partie commune dans un bloc "stylesheets"
+    et on utiliserait la fonction "parent" dans les vues qui heritent -->
     <link rel="stylesheet" href="{{ asset ('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset ('assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset ('assets/css/magnific-popup.css') }}">
@@ -28,7 +31,7 @@
     <link rel="stylesheet" href="{{ asset ('assets/css/slicknav.css') }}">
     <link rel="stylesheet" href="{{ asset ('assets/css/style.css') }}">
     <!-- <link rel="stylesheet" href="{{ asset ('assets/css/responsive.css') }}"> -->
-    
+
 </head>
 
 <body>
@@ -109,6 +112,7 @@
     {% block bradcam_area %}
     <!-- bradcam_area_start -->
     <div class="bradcam_area breadcam_bg">
+        <h1>COUCOU</h1>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -121,12 +125,18 @@
     </div>
     <!-- bradcam_area_end -->
     {% endblock %}
-    {% block content %}{% endblock %}
+
+    {% block content %}
+    {% endblock %}
 
 
     {% include "./front/includes/footer.html.twig" %}
 
     {% block javascripts %}
+    <!-- Le js est aussi le même pour toutes les pages dans ce template, pas besoin d'un bloc.
+    On a crée un bloc juste pour montrer comment on peut rajouter du js dans les pages qui héritent
+    Observez le code de l'index, il y a un console.log après l'appel à la fonction "parent" -->
+
     <!-- JS here -->
     <script src="{{ asset ('assets/js/vendor/modernizr-3.5.0.min.js') }}"></script>
     <script src="{{ asset ('assets/js/vendor/jquery-1.12.4.min.js') }}"></script>

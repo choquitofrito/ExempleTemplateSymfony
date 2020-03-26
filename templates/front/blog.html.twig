@@ -1,10 +1,11 @@
-{% block title %}Blog{% endblock %}
-{% block bradcam_area %}
-    {% block bradcam_title %}blog{% endblock %}
-{% endblock %}
+{% extends "base.html.twig" %}
+{% block title %}blog{% endblock %}
+
+{# on remplace que le title. bradcam_area sera hérité #}
+{% block bradcam_title %}blog{% endblock %}
+
+
 {% block content %}
-
-
 <!--================Blog Area =================-->
 <section class="blog_area section-padding">
     <div class="container">
@@ -327,6 +328,7 @@
         </div>
     </div>
 </section>
+{% endblock %}
 
 <!--================Blog Area =================-->
 {% block javascripts %}
